@@ -3,6 +3,7 @@ package com.pranavbale.Mapping.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -13,6 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 public class Student {
 
     @Id
@@ -25,4 +27,6 @@ public class Student {
     private String email;
     @NotNull(message = "Address must be present")
     private String address;
+
+
 }
