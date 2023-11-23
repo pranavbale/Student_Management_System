@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -19,11 +20,14 @@ public class Batch {
     private UUID batchId;
 
     private String name;
-    private String teacherName;
+    private String category;
 
     @OneToOne
     @JoinColumn(name = "teacher_id")
     private Teacher teacher;
+
+    @OneToMany(mappedBy = "batch")
+    private List<Student> students;
 
 
 }
