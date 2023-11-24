@@ -1,14 +1,11 @@
 package com.pranavbale.Mapping.service;
 
 import com.pranavbale.Mapping.entity.Batch;
-import com.pranavbale.Mapping.entity.Teacher;
 import com.pranavbale.Mapping.repository.BatchRepository;
 import com.pranavbale.Mapping.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.AbstractDocument;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,7 +31,7 @@ public class BatchService {
     }
 
     public List<Batch> getAllBatches() {
-        return (List) batchRepository.findAll();
+        return (List<Batch>) batchRepository.findAll();
     }
 
 
