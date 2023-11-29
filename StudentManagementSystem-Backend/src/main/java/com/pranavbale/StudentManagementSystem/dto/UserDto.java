@@ -18,6 +18,7 @@ public class UserDto {
     @NotNull(message = "Name must be present")
     private  String firstName;
 
+    @NotNull(message = "Last name must be present")
     private String listName;
 
     @NotNull(message = "email must be valid")

@@ -21,7 +21,7 @@ public class User{
 
     private  String firstName;
 
-    private String listName;
+    private String lastName;
 
     private String email;
 
